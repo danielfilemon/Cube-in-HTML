@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cube in HTML</title>
+    <style>
+        .cubo {
+            width: 50vh;
+            height: 50vh;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 10s linear infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .cubo .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #00bfff;
+            opacity: 0.7;
+            border: 5px solid black;
+            box-sizing: border-box;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .cubo .face1 {
+            transform: translateZ(50px);
+        }
+
+        .cubo .face2 {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+
+        .cubo .face3 {
+            transform: rotateY(180deg) translateZ(50px);
+        }
+
+        .cubo .face4 {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+
+        .cubo .face5 {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+
+        .cubo .face6 {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cubo">
+        <div class="face face1">1</div>
+        <div class="face face2">2</div>
+        <div class="face face3">3</div>
+        <div class="face face4">4</div>
+        <div class="face face5">5</div>
+        <div class="face face6">6</div>
+    </div>
+</body>
+
+</html>
